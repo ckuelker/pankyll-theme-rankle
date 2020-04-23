@@ -1,0 +1,16 @@
+{% if cfg.locales and cfg.locales[locale] and cfg.locales|length > 1  %}
+    <li class="nav-item dropdown d-none d-lg-block">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="pankyll-nav-topic">
+                {{ language_name }} 
+            </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        {% for locale in l10n_urls %}
+            <a class="dropdown-item" href="{{l10n_urls[locale].url}}">
+                {{l10n_urls[locale].name}}
+            </a>
+        {% endfor %}
+        </div>
+    </li>
+{% endif %}

@@ -1,0 +1,14 @@
+{% if not type == 'title' %}
+    {% if kw %}
+    <div class="keyword">
+       {% for obj in kw %}
+       <div class="keyword-item">
+           <a class="keyword-link" href="{{ obj.url }}">{{ obj.title }}</a>
+       </div>
+       {% endfor %}
+    </div>
+      {% endif %}
+{% endif %}
+{# This creates the hit entries for _one_ keyword page: Tags/Berlin.html     #}
+{# This will probably never print something under Tags/index.html,           #}
+{# look for siblings instead                                                 #}

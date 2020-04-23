@@ -1,0 +1,11 @@
+{% if siblings and frontmatter.list and not frontmatter.cards %}
+    <div class="siblings">
+      {% for obj in siblings %}
+      <div class="siblings-item">
+          <a class="siblings-link" href="{{ obj.url }}">{{ obj.title }}</a>
+      </div>
+      {% endfor %}
+    </div>
+{% endif %}
+{# This prints the list of keywords under a category like Tags|Categories,   #}
+{# because every keyword under a category is a sibling to the index.html     #}

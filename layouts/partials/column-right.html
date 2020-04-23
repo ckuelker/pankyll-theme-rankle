@@ -1,0 +1,63 @@
+<!-- RIGHT SIDE TOOLS -->
+{# Jinja2 2.10 namespace can be used - not possible for Debian Stretch #}
+{% set n = ['1'] %}
+      <div class="wrapper">
+        <ul>
+{% if pdf %}
+          <li>
+            <input type="checkbox" id="list-item-{{n|length}}">
+            <label for="list-item-{{n|length}}" class="first">{{gettext("Download")}}</label>
+            <ul>
+              <li><a href="{{ pdf }}">🡻 {{gettext("PDF")}}</a></li>
+            </ul>
+          </li>
+{% endif %}
+
+{% if cfg.keywords %}
+    {% for kw in cfg.keywords %}{# categories, tags, ... #}
+        {% if frontmatter[kw] %}{# if we have the category inside the document #}
+            {% if n.append('1') %}{% endif %}
+          <li>
+           <input type="checkbox" id="list-item-{{n|length}}">
+            <label for="list-item-{{n|length}}" class="first">{{cfg[kw][locale].text}}</label>
+              <ul>
+            {% for obj in frontmatter[kw] %}
+                {# obj[0]|upper -  first letter upper case #}
+                {# obj[1:]      -  rest as it is #}
+                <li><a class="{{kw}}-link" href="{{cfg.site.url}}{{cfg[kw][locale].url}}/{{obj[0]|upper}}{{obj[1:]}}.html">{{obj[0]|upper}}{{obj[1:]}}</a></li>
+            {% endfor %}
+              </ul>
+          </li>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if siblings and not type == 'title' and not type == 'keyword' %}
+    {% if n.append('1') %}{% endif %}
+          <li>
+            <input type="checkbox" id="list-item-{{n|length}}">
+            <label for="list-item-{{n|length}}" class="first">{{gettext("Other")}}</label>
+            <ul>
+            {% for obj in siblings %}
+              <li><a class="tag-link" href="{{obj.url}}">{{obj.title}}</a></li>
+            {% endfor %}
+            </ul>
+          </li>
+{% endif %}
+
+{% if git %}
+    {% if n.append('1') %}{% endif %}
+          <li>
+            <input type="checkbox" id="list-item-{{n|length}}">
+            <label for="list-item-{{n|length}}" class="first">{{gettext("Git")}}</label>
+            <ul>
+              <li><a class="tag-link" href="{{ git.UrlBlob }}"><i class="fab fa-github fa-fw"></i>{{gettext("View latest on Github")}}</a></li>
+              <li><a class="tag-link" href="{{ git.UrlEdit }}"><i class="fa fa-edit fa-fw"></i>{{gettext("Edit this page")}}</a></li>
+              <li><a class="tag-link" href="{{ git.UrlCommit }}"><i class="fab fa-git-alt fa-fw"></i>{{gettext("View commit on Github")}}</a></li>
+              <li><a class="tag-link" href="{{ repo.url }}/issues/new?title=Documentation"><i class="fa fa-book fa-fw"></i>{{gettext("Create documentation issue")}}</a></li>
+              <li><a class="tag-link" href="{{ repo.url }}/issues/new"><i class="fas fa-tasks fa-fw"></i>{{gettext("Create project issue")}}</a></li>
+            </ul>
+          </li>
+{% endif %}
+        </ul>
+      </div>

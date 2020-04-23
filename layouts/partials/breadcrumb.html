@@ -1,0 +1,9 @@
+<nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+    <ol class="breadcrumb spb-1">
+    {% for bc in breadcrumb %}
+        <li class="breadcrumb-item{% if bc.active %} active{% endif %}">
+            <a href="{{ bc.url }}">{{ bc.title }}</a>
+        </li>
+    {% endfor %}
+    </ol>
+</nav>

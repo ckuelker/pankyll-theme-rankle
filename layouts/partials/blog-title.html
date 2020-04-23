@@ -1,0 +1,21 @@
+{% if frontmatter.title %}
+     <h1 id="blog-title">{{  frontmatter.title  }}</h1>
+{% endif %}
+{% if frontmatter.description %}
+    <div class="blog-title-description blog-description">
+        {{ frontmatter.description }}
+    </div>
+{% endif %}
+<ul class="blog-title-list">
+    {% if frontmatter.author %}
+        <li class="blog-title-list-item blog-author">{{ frontmatter.author }}</li>
+    {% endif %}
+    {% if frontmatter.version %}
+        <li class="blog-title-list-item blog-version">{{ frontmatter.version }}</li>
+    {% endif %}
+    {% if frontmatter.date %}
+       <li class="blog-title-list-item blog-date">{{ frontmatter.date }}</li>
+   {% else %}
+       <li class="blog-title-list-item blog-date">{{ date }}</li>
+   {% endif %}
+</ul>

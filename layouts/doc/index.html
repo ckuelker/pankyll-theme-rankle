@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang={{locale}} class=no-js>
+  <head>
+    <meta name=type content="{{ type }}">
+    {% include "partials/head.html" %}
+  </head>
+  <body class="rankle">
+
+{# --- [ header content ] -------------------------------------------------- #}
+    <header>
+      {% include "partials/nav.html" %}
+    </header>
+
+{# --- [ wrapper begin ] --------------------------------------------------- #}
+    <div class="rankle-body">
+{# --- [ main page content ] ----------------------------------------------- #}
+      <section class="rankle-content">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 order-lg-2">
+            {% include "partials/breadcrumb.html" %}
+            {% include "partials/doc-title.html" %}
+            {{ body }}
+            {% include "partials/list-keyword.html" %}
+            {% include "partials/list-siblings.html" %}
+            {% include "partials/cards-siblings.html" %}
+            {% include "partials/status.html" %}
+            {% include "partials/disclaimer.html" %}
+          </div>
+        </div>
+      </section>
+
+{# --- [ left sidebar 1 content ] ------------------------------------------ #}
+      <div class="rankle-sidebar-1 hg-sidebar">
+        <div class="col-sm-12 col-md-12 col-lg-12 td-sidebar bar-toc bar-left">
+          {% include "partials/column-left.html" %}
+        </div>
+      </div>
+
+{# --- [ right sidebar 2 content ] ----------------------------------------- #}
+      <div class="col-sm-12 col-md-12 col-lg-2 order-lg-3 bar-tools bar-right">
+        <div class="rankle-sidebar-2 hg-sidebar">
+          {% include "partials/column-right.html" %}
+        </div>
+      </div>
+
+{# --- [ wrapper end ] ----------------------------------------------------- #}
+    </div>
+
+{# --- [ header content ] -------------------------------------------------- #}
+    <footer>
+      {% include "partials/footer.html" %}
+    </footer>
+  </body>
+</html>

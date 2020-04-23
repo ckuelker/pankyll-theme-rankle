@@ -1,0 +1,72 @@
+<footer class="bg-dark row d-print-none footer">
+  <div class="footer container-fluid mx-sm5">
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <div class="container-fluid" style="margin-top:5px">
+        <div class="row">
+          <div class="col-sm-2 footer-left">
+            {% if cfg.footer_left %}
+            <ul class="list-inline mb-0 footer-list">
+            {% for o in cfg.footer_left[locale] %}
+            {% set obj = cfg.footer_left[locale][o] %}
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="{{obj.tip}}" data-original-title="{{obj.tip}}">
+               <a class="text-white footer-link" target="_blank" href="{{obj.url}}">
+                 <i class="{{obj.font}} fa-{{obj.icon}}"></i>
+               </a>
+              </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          <div class="col-sm-8 footer-mid">
+            {% if cfg.footer_middle %}
+            <ul class="list-inline mb-0 footer-list">
+            {% for o in cfg.footer_middle[locale] %}
+            {% set obj = cfg.footer_middle[locale][o] %}
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="{{obj.tip}}" data-original-title="{{obj.tip}}">
+               <a class="text-white footer-link" target="_blank" href="{{obj.url}}">
+                 <i class="{{obj.font}} fa-{{obj.icon}}"></i>
+               </a>
+              </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+            <ul class="footer-list footer-middle-list">
+              <li class="footer-item footer-middle-item site-update-last-item">{{ gettext("Last site update: {num}").format(num=isodate)  }}</li>
+            {% for obj in cfg.footer[locale] %}
+              <li class="footer-item footer-middle-item">{{ obj.text }}</li>
+            {% endfor %}
+            <li class="footer-list-item footer-middle-list-item">
+              <a class="rankle-link-dark footer-link footer-middle-link generator-link" href="https://github.com/ckuelker/pankyll">{{ pankyll.generator }} v{{ pankyll.version }}</a>
+              {{ gettext("theme") }} <a class="rankle-link-dark theme-link" href="{{ theme.url }}">{{ theme.name }} v{{ theme.version }}</a>
+            </li>
+            </ul>
+
+          </div>
+         <div class="col-sm-2 footer-right">
+            {% if cfg.footer_right %}
+            <ul class="list-inline mb-0 footer-list">
+            {% for o in cfg.footer_right[locale] %}
+            {% set obj = cfg.footer_right[locale][o] %}
+             <li class="list-inline-item mx-2 h3 footer-item"
+                 data-toggle="tooltip" data-placement="top" title=""
+                 aria-label="{{obj.tip}}" data-original-title="{{obj.tip}}">
+               <a class="text-white footer-link" target="_blank" href="{{obj.url}}">
+                 <i class="{{obj.font}} fa-{{obj.icon}}"></i>
+               </a>
+              </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% include "partials/foot-script.html" %}
+
+

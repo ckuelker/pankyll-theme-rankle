@@ -1,0 +1,5 @@
+{% if git %}
+    {% if git.Subject and git.AbbreviatedHash and git.UrlBlob %}
+    <li><a href="{{ git.UrlCommit }}">{{ git.Subject }} ({{ git.AbbreviatedHash }})</a></li>
+    {% endif %}
+{% endif %}

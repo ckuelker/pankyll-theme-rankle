@@ -1,0 +1,12 @@
+[submodule "font/roboto"]
+	path = font/roboto
+	url = https://github.com/choffmeister/roboto-fontface-bower.git
+	branch = master
+[submodule "font/awesome"]
+	path = font/awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+	branch = master
+[submodule "font/lato"]
+	path = font/lato
+	url = https://github.com/hakger/latolatin-webfont.git
+	branch = master

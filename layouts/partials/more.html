@@ -1,0 +1,14 @@
+{% if cfg.more and cfg.more[locale] %}
+    <li class="nav-item dropdown d-none d-lg-block">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="pankyll-nav-topic">
+                {{ gettext("More") }}
+            </span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        {% for obj in cfg.more[locale] %}
+            <a class="dropdown-item" href="{{cfg.site.url}}{{obj.link.url}}">{{obj.link.text}}</a>
+        {% endfor %}
+        </div>
+    </li>
+{% endif %}

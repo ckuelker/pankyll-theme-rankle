@@ -1,0 +1,33 @@
+name:    pankyll-theme-rankle
+url:     https://github.com/ckuelker/pankyll-theme-rankle
+author:  Christian Külker
+copyright:
+ - "2020, by Christian Külker"
+license: GPLv3
+version: 0.1.0
+
+# font/awesome/css/all.min.css points to ../webfonts for fonts
+
+static:
+    font/roboto/fonts/roboto-slab/Roboto-Slab-Bold.woff: font/roboto-slab/RobotoSlab-Bold.woff
+    font/roboto/fonts/roboto-slab/Roboto-Slab-Bold.woff2: font/roboto-slab/RobotoSlab-Bold.woff2
+    font/awesome/webfonts/fa-solid-900.eot: webfonts/fa-solid-900.eot
+    font/awesome/webfonts/fa-solid-900.svg: webfonts/fa-solid-900.svg
+    font/awesome/webfonts/fa-solid-900.woff: webfonts/fa-solid-900.woff
+    font/awesome/webfonts/fa-solid-900.woff2: webfonts/fa-solid-900.woff2
+    font/awesome/webfonts/fa-solid-900.ttf: webfonts/fa-solid-900.ttf
+    font/awesome/webfonts/fa-brands-400.eot: webfonts/fa-brands-400.eot
+    font/awesome/webfonts/fa-brands-400.svg: webfonts/fa-brands-400.svg
+    font/awesome/webfonts/fa-brands-400.woff: webfonts/fa-brands-400.woff
+    font/awesome/webfonts/fa-brands-400.woff2: webfonts/fa-brands-400.woff2
+    font/awesome/webfonts/fa-brands-400.ttf: webfonts/fa-brands-400.ttf
+    font/awesome/css/all.min.css: css/all.min.css
+    font/lato/fonts/lato-regular.woff: font/lato/lato-regular.woff
+    font/lato/fonts/lato-regular.woff2: font/lato/lato-regular.woff2
+    font/lato/fonts/lato-regular.ttf: font/lato/lato-regular.ttf
+    font/lato/fonts/lato-bolditalic.woff: font/lato/lato-bolditalic.woff
+    font/lato/fonts/lato-bolditalic.woff2: font/lato/lato-bolditalic.woff2
+    font/lato/fonts/lato-bolditalic.ttf: font/lato/lato-bolditalic.ttf
+    font/lato/fonts/lato-italic.woff:  font/lato/lato-italic.woff
+    font/lato/fonts/lato-italic.woff2:  font/lato/lato-italic.woff2
+    font/lato/fonts/lato-italic.ttf:  font/lato/lato-italic.ttf

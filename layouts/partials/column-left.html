@@ -1,0 +1,35 @@
+       {% if not frontmatter.toc_title_hide and frontmatter.title %}
+       <ul class="td-sidebar-nav-toc-tile">
+         <li class"td-sidebar-nav-toc-tile-item">{{ frontmatter.title }}</li>
+       {% endif %}
+         {% if toc and not frontmatter.toc_hide %}{{ toc }}{% endif %}
+       {% if frontmatter.title %}
+       </ul>
+       {% endif %}
+       {% if sibling and not frontmatter.list_hide_left %}
+
+       {# TODO
+       <ul class="td-didebar-nav-list">
+         {% for obj in siblings %}
+         <li class="td-sitebar-nav-list-item"><a class="list-item-link" href="{{ obj.url }}">{{  obj.title  }}</a></li>
+         {% endfor %}
+       </ul>
+       #}
+       {% endif %}
+
+       {% if newtoc %}
+        <ul class="td-sidebar-nav__section pr-md-3">
+      [% FOREACH p IN leftsitenav.parent %]
+        <li class="td-sidebar-nav__section-title">
+          <a class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section" href="[% p.value %]">[% p.key %]</a>
+        <li>
+      [% END %]
+        <ul class="td-sidebar-nav__section pr-md-3">
+      [% FOREACH c IN leftsitenav.child  %]
+          <li class="collapse show">
+            <a class="td-sidebar-link td-sidebar-link__page [% IF leftchildactive.${c.key} %] active[%END%]" href="[% c.value %]">[% c.key %]</a>
+          </li>
+      [% END %]
+        </ul>
+      </ul>
+      {% endif %}

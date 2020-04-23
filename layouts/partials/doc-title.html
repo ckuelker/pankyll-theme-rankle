@@ -1,0 +1,8 @@
+{% if frontmatter.title %}
+    <div class="title">
+        <h1 id="title">{{  frontmatter.title  }}</h1>
+        {% if frontmatter.author %}<h3 id="author">{{ frontmatter.author }}</h3>{% endif %}
+        {% if frontmatter.version %}<h3 id="version">{{  frontmatter.version  }}</h3>{% endif %}
+        {% if frontmatter.date %}<h3 id="author">{{  frontmatter.date  }}</h3>{% endif %}
+    </div>
+{% endif %}

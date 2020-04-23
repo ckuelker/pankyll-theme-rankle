@@ -1,0 +1,88 @@
+# English translations for PACKAGE package.
+# Copyright (C) 2020 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-20 15:42+0200\n"
+"PO-Revision-Date: 2020-04-02 17:16+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: layouts/partials/more.html:6
+msgid "More"
+msgstr "More"
+
+#: layouts/partials/modified.html:2
+#, python-brace-format
+msgid "Last modified (via git): {num}"
+msgstr "Last modified (via git): {num}"
+
+#: layouts/partials/modified.html:4
+#, python-brace-format
+msgid "Last modified: {num}"
+msgstr "Last modified: {num}"
+
+#: layouts/partials/pdfdownload.html:1 layouts/partials/bar-tools.html:12
+msgid "PDF"
+msgstr "PDF"
+
+#: layouts/partials/wordcount.html:1
+#, python-format
+msgid "%(num)d word"
+msgid_plural "%(num)d words"
+msgstr[0] "%(num)d word"
+msgstr[1] "%(num)d words"
+
+#: layouts/partials/bar-tools.html:10
+msgid "Download"
+msgstr "Download"
+
+#: layouts/partials/bar-tools.html:40
+msgid "Other"
+msgstr "Other"
+
+#: layouts/partials/bar-tools.html:53
+msgid "Git"
+msgstr "Git"
+
+#: layouts/partials/bar-tools.html:55
+msgid "View latest on Github"
+msgstr "View latest on Github"
+
+#: layouts/partials/bar-tools.html:56
+msgid "Edit this page"
+msgstr "Edit this page"
+
+#: layouts/partials/bar-tools.html:57
+msgid "View commit on Github"
+msgstr "View commit on Github"
+
+#: layouts/partials/bar-tools.html:58
+msgid "Create documentation issue"
+msgstr "Create documentation issue"
+
+#: layouts/partials/bar-tools.html:59
+msgid "Create project issue"
+msgstr "Create project issue"
+
+#: layouts/partials/cards-siblings.html:12
+msgid "Read More »"
+msgstr "Read More »"
+
+#: layouts/partials/footer.html:38
+#, python-brace-format
+msgid "Last site update: {num}"
+msgstr "Last site update: {num}"
+
+#: layouts/partials/footer.html:44
+msgid "theme"
+msgstr "theme"
