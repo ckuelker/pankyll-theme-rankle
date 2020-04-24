@@ -38,22 +38,29 @@
       <meta name=twitter:description content="{{ description }}">
 
 {# links #}
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-{# In case of local storage
+{# CSS #}
+{% if cfg.default.css_local %}
+      <link rel="stylesheet" href="/css/bootstrap.min.css">-->
       <link rel="stylesheet" href="/css/hljs/default.min.css">-->
       <link rel="stylesheet" href="/css/hljs/railscasts.css">-->
-#}
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">
+{% else %}
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      {#<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css">#}
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/railscasts.min.css">
+{% endif %}
       <link rel="stylesheet" href="/css/all.min.css">
       <link rel="stylesheet" href="/css/rankle.css">
 
 {# script #}
+{# JS #}
+{% if cfg.default.js_local %}
+      <script src="/js/jquery.min.js"></script>
+      <script src="/jspopper.min.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
+      <script src="/js/highlight.min.js"></script>
+{% else %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-{# In case of local storage
-      <script src="/js/hljs/highlight.pack.js"></script>
-#}
       <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+{% endif %}
