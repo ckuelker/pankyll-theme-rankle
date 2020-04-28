@@ -7,7 +7,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         {% for obj in cfg.more[locale] %}
-            <a class="dropdown-item" href="{{obj.link.url}}|localurl">{{obj.link.text}}</a>
+            <a class="dropdown-item" href="{{obj.link.url|localurl}}">{{obj.link.text}}</a>
         {% endfor %}
         </div>
     </li>
