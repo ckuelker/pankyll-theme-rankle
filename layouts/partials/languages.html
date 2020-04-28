@@ -7,7 +7,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
         {% for locale in l10n_urls %}
-            <a class="dropdown-item" href="{{l10n_urls[locale].url}}">
+            <a class="dropdown-item" href="{{l10n_urls[locale].url|localurl}}">
                 {{l10n_urls[locale].name}}
             </a>
         {% endfor %}

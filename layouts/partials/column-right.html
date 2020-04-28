@@ -24,7 +24,7 @@
             {% for obj in frontmatter[kw] %}
                 {# obj[0]|upper -  first letter upper case #}
                 {# obj[1:]      -  rest as it is #}
-                <li><a class="{{kw}}-link" href="{{cfg[kw][locale].url}}/{{obj[0]|upper}}{{obj[1:]}}.html">{{obj[0]|upper}}{{obj[1:]}}</a></li>
+                <li><a class="{{kw}}-link" href="{{cfg[kw][locale].url|localurl}}/{{obj[0]|upper}}{{obj[1:]}}.html">{{obj[0]|upper}}{{obj[1:]}}</a></li>
             {% endfor %}
               </ul>
           </li>
