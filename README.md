@@ -1,14 +1,14 @@
 ---
 title:  pankyll-theme-rankle/README.md
 author: Christian Külker
-date:   2020-03-29
+date:   2020-05-12
 
 ---
 
 # Abstract
 
 This document describes briefly the [Pankyll] theme [Rankle], its version,
-and installation. The goal of the [Ranke] theme is to provide easy to read
+and installation. The goal of the [Rankle] theme is to provide easy to read
 pages suited for documentation and blog posts.
 
 ![Github license](https://img.shields.io/github/license/ckuelker/pankyll-theme-rankle.svg)
@@ -21,6 +21,7 @@ pages suited for documentation and blog posts.
 
 | Version | Date       | Author           | Notes                             |
 | ------- | ---------- |----------------- | --------------------------------- |
+| 0.1.1   | 2020-05-12 | Christian Külker | Favicon                           |
 | 0.1.0   | 2020-03-29 | Christian Külker | Initial release                   |
 
 # Introduction
@@ -43,6 +44,20 @@ cloning the theme into the `themes` directory.
 cd  project/themes
 git clone --recursive https://github.com/ckuelker/pankyll-theme-rankle.git
 ```
+
+# Creating Or Re-Creating The `favicon.ico`.
+
+The `favicon.ico` can be create via the **ImageMagick** command line tool
+`convert`:
+
+```shell
+convert -density 256x256 -background transparent favicon.svg \
+-define icon:auto-resize -colors 256 favicon.ico
+```
+
+More info about [favicons in the quick guide].
+
+[github]: https://github.com/ckuelker/quick-guide-en-us/blob/master/Web/Design/favicon.md
 
 # Author
 
@@ -91,3 +106,4 @@ git clone --recursive https://github.com/ckuelker/pankyll-theme-rankle.git
 
 [Pankyll]: https://www.pankyll.org/
 [Rankle]: https://github.com/ckuelker/pankyll-theme-rankle/
+[favicons in the quick guide]: https://github.com/ckuelker/quick-guide-en-us/blob/master/Web/Design/favicon.md
