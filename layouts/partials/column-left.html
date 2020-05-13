@@ -2,7 +2,7 @@
        <ul class="td-sidebar-nav-toc-tile">
          <li class"td-sidebar-nav-toc-tile-item">{{ frontmatter.title }}</li>
        {% endif %}
-         {% if toc and not frontmatter.toc_hide %}{{ toc }}{% endif %}
+         {% if toc and frontmatter.TOC %}{{ toc }}{% endif %}
        {% if frontmatter.title %}
        </ul>
        {% endif %}
