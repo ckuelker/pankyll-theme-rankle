@@ -1,7 +1,7 @@
 ---
 title:  pankyll-theme-rankle/README.md
 author: Christian Külker
-date:   2020-05-12
+date:   2020-05-13
 
 ---
 
@@ -21,6 +21,7 @@ pages suited for documentation and blog posts.
 
 | Version | Date       | Author           | Notes                             |
 | ------- | ---------- |----------------- | --------------------------------- |
+| 0.1.2   | 2020-05-13 | Christian Külker | Fix TOC, fix CSS, javasript URLs  |
 | 0.1.1   | 2020-05-12 | Christian Külker | Favicon                           |
 | 0.1.0   | 2020-03-29 | Christian Külker | Initial release                   |
 
