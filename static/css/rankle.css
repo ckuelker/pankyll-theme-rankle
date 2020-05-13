@@ -352,6 +352,10 @@ table {
 }
 pre {
     font-size: 120%;
+    /* to wrap around long line in code block this CSS 3 can be used:
+    white-space: pre-wrap;
+    See: https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
+    however, when used it will still be most likely wrong in the PDF */
 }
 pre.plain { /* pre class = hljs pain, added by parent.js */
    background: rgba(182,185,191,.5); /* IBM GREY */
