@@ -1,7 +1,7 @@
 ---
 title:  pankyll-theme-rankle/README.md
 author: Christian Külker
-date:   2020-05-13
+date:   2020-10-21
 
 ---
 
@@ -21,6 +21,10 @@ pages suited for documentation and blog posts.
 
 | Version | Date       | Author           | Notes                             |
 | ------- | ---------- |----------------- | --------------------------------- |
+| 0.1.3   | 2020-10-21 | Christian Külker | Add disclaimer for CC-BY-SA 4.0   |
+|         |            |                  | Fix link to favicon doc           |
+|         |            |                  | Add feature Include Before        |
+|         |            |                  | Add feature Include After         |
 | 0.1.2   | 2020-05-13 | Christian Külker | Fix TOC, fix CSS, javasript URLs  |
 | 0.1.1   | 2020-05-12 | Christian Külker | Favicon                           |
 | 0.1.0   | 2020-03-29 | Christian Külker | Initial release                   |
@@ -107,4 +111,4 @@ More info about [favicons in the quick guide].
 
 [Pankyll]: https://www.pankyll.org/
 [Rankle]: https://github.com/ckuelker/pankyll-theme-rankle/
-[favicons in the quick guide]: https://github.com/ckuelker/quick-guide-en-us/blob/master/Web/Design/favicon.md
+[favicons in the quick guide]: https://github.com/ckuelker/quick-guide-en-us/blob/master/Dev/Web/Design/favicon.md

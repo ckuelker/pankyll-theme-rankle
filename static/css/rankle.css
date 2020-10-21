@@ -9,12 +9,15 @@
 | whether the !important declaration was used. When multiple rules of the     |
 | same "specificity level" exist, whichever one appears last wins.            |
 |                                                                             |
-| Version: 0.1.0                                                              |
+| Version: 0.1.1                                                              |
 |                                                                             |
 | Changes:                                                                    |
 |                                                                             |
+| 0.1.1 2020-03-09 Christian Kuelker <c@.c8i.org>                             |
+|     - Add .disclaimer_warranty_liability                                    |
+|                                                                             |
 | 0.1.0 2020-03-09 Christian Kuelker <c@.c8i.org>                             |
-|     - initial release                                                       |
+|     - Initial release                                                       |
 |                                                                             |
 +-----------------------------------------------------------------------------+
 */
@@ -380,6 +383,24 @@ pre.plain { /* pre class = hljs pain, added by parent.js */
   text-align: left;
   box-sizing: border-box;
 }
+/* --- [ warning box ] ----------------------------------------------------- */
+.warning-primary {
+  border-style: solid;
+  border-color: #30638e;
+}
+.warning {
+  background: #F7BCBC;
+  color: inherit;
+  border-radius: 0;
+  margin: 2rem;
+  padding: 1.5rem;
+  padding-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  box-sizing: border-box;
+}
 /* ----[ lists ] ----------------------------------------------------------- */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items */
 .list {
@@ -450,6 +471,9 @@ ul.status li a:hover {
 
 }
 .disclaimer_liability {
+  padding:  1em 0 0 0 ;
+}
+.disclaimer_warranty_liability {
   padding:  1em 0 0 0 ;
 }
 
