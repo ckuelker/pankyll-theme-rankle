@@ -62,7 +62,7 @@
           </li>
 {% endif %}
 
-{% if top10_list and cfg.default.top10 and cfg.default.top10_right %}
+{% if top10_list and cfg.feature.top10 and cfg.default.top10_right %}
     {% if n.append('1') %}{% endif %}
           <li>
             <input type="checkbox" id="list-item-{{n|length}}">
