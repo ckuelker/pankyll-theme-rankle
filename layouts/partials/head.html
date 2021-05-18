@@ -39,7 +39,7 @@
 
 {# links #}
 {# CSS #}
-{% if cfg.default.css_local %}
+{% if cfg.feature.css_local %}
       <link rel="stylesheet" href="{{"/css/bootstrap.min.css"|localurl}}">
       <link rel="stylesheet" href="{{"/css/hljs/railscasts.min.css"|localurl}}">
 {% else %}
@@ -52,7 +52,7 @@
 
 {# script #}
 {# JS #}
-{% if cfg.default.js_local %}
+{% if cfg.feature.js_local %}
       <script src="{{"/js/jquery.min.js"|localurl}}"></script>
       <script src="{{"/js/popper.min.js"|localurl}}"></script>
       <script src="{{"/js/bootstrap.min.js"|localurl}}"></script>
