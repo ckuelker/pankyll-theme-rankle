@@ -1,7 +1,7 @@
 ---
 title:  pankyll-theme-rankle/README.md
 author: Christian Külker
-date:   2020-10-21
+date:   2021-05-18
 
 ---
 
@@ -19,15 +19,14 @@ pages suited for documentation and blog posts.
 
 # Changes
 
-| Version | Date       | Author           | Notes                             |
-| ------- | ---------- |----------------- | --------------------------------- |
-| 0.1.3   | 2020-10-21 | Christian Külker | Add disclaimer for CC-BY-SA 4.0   |
-|         |            |                  | Fix link to favicon doc           |
-|         |            |                  | Add feature Include Before        |
-|         |            |                  | Add feature Include After         |
-| 0.1.2   | 2020-05-13 | Christian Külker | Fix TOC, fix CSS, javasript URLs  |
-| 0.1.1   | 2020-05-12 | Christian Külker | Favicon                           |
-| 0.1.0   | 2020-03-29 | Christian Külker | Initial release                   |
+| Version | Date       | Notes                                                |
+| ------- | ---------- | ---------------------------------------------------- |
+| 0.1.4   | 2021-05-18 | Add top 10 feature, cfg.yaml feature section         |
+| 0.1.3   | 2020-10-21 | Add disclaimer for CC-BY-SA 4.0, fix link to favicon |
+|         |            | doc, +feature Include Before, +feature Include After |
+| 0.1.2   | 2020-05-13 | Fix TOC, fix CSS, JavaScript URLs                    |
+| 0.1.1   | 2020-05-12 | Favicon                                              |
+| 0.1.0   | 2020-03-29 | Initial release                                      |
 
 # Introduction
 
@@ -64,13 +63,39 @@ More info about [favicons in the quick guide].
 
 [github]: https://github.com/ckuelker/quick-guide-en-us/blob/master/Web/Design/favicon.md
 
+# Updating Translations
+
+- Add new translation to HTML file: `{{gettext("Latest")}}`
+- make i18n-extract
+- This changes `locale/pankyll-theme-rankle.pot`
+- make i18n-update
+- Edit language `*.po` files
+
+~~~
+locale/de_DE/LC_MESSAGES/pankyll-theme-rankle.po
+locale/en_US/LC_MESSAGES/pankyll-theme-rankle.po
+locale/ja_JP/LC_MESSAGES/pankyll-theme-rankle.po
+~~~
+
+- make i18n-runtime
+- This will change `*.mo` files
+
+~~~
+locale/de_DE/LC_MESSAGES/pankyll-theme-rankle.mo
+locale/de_DE/LC_MESSAGES/pankyll-theme-rankle.po
+locale/en_US/LC_MESSAGES/pankyll-theme-rankle.mo
+locale/en_US/LC_MESSAGES/pankyll-theme-rankle.po
+locale/ja_JP/LC_MESSAGES/pankyll-theme-rankle.mo
+locale/ja_JP/LC_MESSAGES/pankyll-theme-rankle.po
+~~~
+
 # Author
 
     Christian Külker <c@c8i.org>
 
 # License And Copyright
 
-    Copyright (C) 2020 by Christian Kuelker
+    Copyright (C) 2020, 2021 by Christian Kuelker
 
     This program is free software; you can redistribute it and/or modify it
     under the terms of the GNU General Public License as published by the Free
