@@ -1,0 +1,12 @@
+      {% if top10_list and cfg.default.top10 and ( frontmatter.top10 or cfg.default.top10_left ) %}
+      {{gettext("Latest")}}:
+      <ul class="td-sidebar-nav-list">
+      {% for obj in top10_list %}
+        <li class="td-sitebar-nav-list-item">
+                <a class="list-item-link" href="{{ obj.url }}">{{  obj.title  }} ({{ obj.date }})</a>
+        </li>
+      {% endfor %}
+        </li>
+      </ul>
+      {% endif %}
+

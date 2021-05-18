@@ -1,5 +1,7 @@
 <!-- RIGHT SIDE TOOLS -->
 {# Jinja2 2.10 namespace can be used - not possible for Debian Stretch #}
+
+
 {% set n = ['1'] %}
       <div class="wrapper">
         <ul>
@@ -59,5 +61,19 @@
             </ul>
           </li>
 {% endif %}
+
+{% if top10_list and cfg.default.top10 and cfg.default.top10_right %}
+    {% if n.append('1') %}{% endif %}
+          <li>
+            <input type="checkbox" id="list-item-{{n|length}}">
+            <label for="list-item-{{n|length}}" class="first">{{gettext("Latest")}}</label>
+            <ul>
+      {% for obj in top10_list %}
+              <li><a class="tag-link" href="{{obj.url}}">{{obj.title}} ({{obj.date}})</a></li>
+      {% endfor %}
+            </ul>
+          </li>
+{% endif %}
+
         </ul>
       </div>

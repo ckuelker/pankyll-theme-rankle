@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 15:42+0200\n"
+"POT-Creation-Date: 2021-05-18 06:38+0200\n"
 "PO-Revision-Date: 2020-04-02 17:16+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,9 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: layouts/partials/more.html:6
-msgid "More"
-msgstr "Mehr"
+#: layouts/partials/wordcount.html:1
+#, python-format
+msgid "%(num)d word"
+msgid_plural "%(num)d words"
+msgstr[0] "%(num)d Wort"
+msgstr[1] "%(num)d Worte"
+
+#: layouts/partials/footer.html:38
+#, python-brace-format
+msgid "Last site update: {num}"
+msgstr "Letzte Aktualisierung: {num}"
+
+#: layouts/partials/footer.html:44
+msgid "theme"
+msgstr "Design (Computer-Skin)"
 
 #: layouts/partials/modified.html:2
 #, python-brace-format
@@ -31,58 +43,51 @@ msgstr "Zuletzt (mittles git) geändert am: {num}"
 msgid "Last modified: {num}"
 msgstr "Zuletzt geändert am: {num}"
 
-#: layouts/partials/pdfdownload.html:1 layouts/partials/bar-tools.html:12
+#: layouts/partials/pdfdownload.html:1 layouts/partials/column-right.html:13
 msgid "PDF"
 msgstr "PDF"
 
-#: layouts/partials/wordcount.html:1
-#, python-format
-msgid "%(num)d word"
-msgid_plural "%(num)d words"
-msgstr[0] "%(num)d Wort"
-msgstr[1] "%(num)d Worte"
-
-#: layouts/partials/bar-tools.html:10
-msgid "Download"
-msgstr "Herunter laden"
-
-#: layouts/partials/bar-tools.html:40
-msgid "Other"
-msgstr "Andere"
-
-#: layouts/partials/bar-tools.html:53
-msgid "Git"
-msgstr "Git"
-
-#: layouts/partials/bar-tools.html:55
-msgid "View latest on Github"
-msgstr "Siehe aktuelle Version auf Github"
-
-#: layouts/partials/bar-tools.html:56
-msgid "Edit this page"
-msgstr "Seite bearbeiten"
-
-#: layouts/partials/bar-tools.html:57
-msgid "View commit on Github"
-msgstr "Siehe Schnappschuss (Commit) auf Github"
-
-#: layouts/partials/bar-tools.html:58
-msgid "Create documentation issue"
-msgstr "Erstelle ein Dokumentations-Eintrag"
-
-#: layouts/partials/bar-tools.html:59
-msgid "Create project issue"
-msgstr "Erstelle ein Projekt-Eintrag"
-
-#: layouts/partials/cards-siblings.html:12
+#: layouts/partials/cards-siblings.html:13
 msgid "Read More »"
 msgstr "Mehr »"
 
-#: layouts/partials/footer.html:38
-#, python-brace-format
-msgid "Last site update: {num}"
-msgstr "Letzte Aktualisierung: {num}"
+#: layouts/partials/column-right.html:11
+msgid "Download"
+msgstr "Herunter laden"
 
-#: layouts/partials/footer.html:44
-msgid "theme"
-msgstr "Design (Computer-Skin)"
+#: layouts/partials/column-right.html:41
+msgid "Other"
+msgstr "Andere"
+
+#: layouts/partials/column-right.html:54
+msgid "Git"
+msgstr "Git"
+
+#: layouts/partials/column-right.html:56
+msgid "View latest on Github"
+msgstr "Siehe aktuelle Version auf Github"
+
+#: layouts/partials/column-right.html:57
+msgid "Edit this page"
+msgstr "Seite bearbeiten"
+
+#: layouts/partials/column-right.html:58
+msgid "View commit on Github"
+msgstr "Siehe Schnappschuss (Commit) auf Github"
+
+#: layouts/partials/column-right.html:59
+msgid "Create documentation issue"
+msgstr "Erstelle ein Dokumentations-Eintrag"
+
+#: layouts/partials/column-right.html:60
+msgid "Create project issue"
+msgstr "Erstelle ein Projekt-Eintrag"
+
+#: layouts/partials/column-right.html:69
+#: layouts/partials/column-left-top10.html:2
+msgid "Latest"
+msgstr "Neustes"
+
+#: layouts/partials/more.html:5
+msgid "More"
+msgstr "Mehr"
