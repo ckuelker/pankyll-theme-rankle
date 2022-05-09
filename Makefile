@@ -3,16 +3,18 @@
 # |                                                                           |
 # | Rankle theme tasks, like i18n and l10n.                                   |
 # |                                                                           |
-# | Version: 0.1.0 (change inline)                                            |
+# | Version: 0.1.1 (change inline)                                            |
 # |                                                                           |
 # | Changes:                                                                  |
 # |                                                                           |
+# | 0.1.1 2022-05-09 Christian Külker <c@c8i.org>                             |
+# |     - Fix Makefile typos                                                  |
 # | 0.1.0 2020-04-02 Christian Külker <c@c8i.org>                             |
 # |     - initial release                                                     |
 # |                                                                           |
 # +---------------------------------------------------------------------------+
 #
-VERSION=0.1.0
+VERSION=0.1.1
 # -----------------------------------------------------------------------------
 # NO CHANGES BEYOND THIS POINT
 I18N_NS:=pankyll-theme-rankle
@@ -33,11 +35,11 @@ usage:
 	@echo "$(L)"
 	@echo "USAGE:"
 	@echo "$(L)"
-	@echo "make usage     : this information"
-	@echo "make info      : print more info"
-	@echo "make clean     : remove prcess files"
-	@echo "make realclean : remove target"
-	@echo "make test      : debug test"
+	@echo "make usage        : this information"
+	@echo "make info         : print more info"
+	@echo "make clean        : remove prcoess files"
+	@echo "make realclean    : remove target"
+	@echo "make test         : debug test"
 	@echo "make i18n-extract : extract new text from HTML - invalidates translations"
 	@echo "make i18n-update  : merge *.pot with *.po after extraction"
 	@echo "make i18n-runtime : create *.mo after update"
@@ -54,7 +56,7 @@ test:
 # 0
 locale:
 	mkdir -p $@
-# 1     
+# 1
 $(I18N_PFX)/$(I18N_NS).pot: locale
 	xgettext --no-wrap --from-code=UTF-8 --keyword=_ -L Python \
 	--copyright-holder='$(I18N_FIRST)' --package-name='$(I18N_NS)' \
@@ -69,7 +71,7 @@ i18n-extract: $(I18N_PFX)/$(I18N_NS).pot
 # 2
 # msginit --no-wrap --no-translator --input=locale/pankyll-theme-rankle.pot \
 #         --locale=en_US -o locale/en_US/LC_MESSAGES/pankyll-theme-rankle.po
-$(I18N_PO_FILES): 
+$(I18N_PO_FILES):
 	mkdir -p $(@D)
 	msginit --no-wrap --no-translator --input=$(I18N_PFX)/$(I18N_NS).pot \
 	--locale=$(notdir $(patsubst %/LC_MESSAGES,%, $(@D))) -o $@
