@@ -27,7 +27,7 @@ msgstr[1] "%(num)d words"
 #: layouts/partials/footer.html:38
 #, python-brace-format
 msgid "Last site update: {num}"
-msgstr "Last site update: {num}"
+msgstr "Last page update: {num}"
 
 #: layouts/partials/footer.html:44
 msgid "theme"
