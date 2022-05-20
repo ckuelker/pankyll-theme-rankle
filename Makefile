@@ -39,16 +39,16 @@ usage:
 	@echo "$(L)"
 	@echo "USAGE:"
 	@echo "$(L)"
-	@echo "make usage           : this information"
-	@echo "make info            : print more info"
-	@echo "make clean           : remove prcoess files"
-	@echo "make realclean       : remove target"
-	@echo "make test            : debug test"
-	@echo "make i18n-extract    : extract new text from HTML - invalidates translations"
-	@echo "make i18n-update     : merge *.pot with *.po after extraction"
-	@echo "make i18n-runtime    : create *.mo after update"
-	@echo "make submoduleclean  : Reset submodule (remove changed, detached HEAD)"
-	@echo "make submodule-update: Reset submodule (remove changed, detached HEAD)"
+	@echo "make usage               : this information"
+	@echo "make info                : print more info"
+	@echo "make clean               : remove prcoess files"
+	@echo "make realclean           : remove target"
+	@echo "make test                : debug test"
+	@echo "make i18n-extract        : extract new text from HTML - invalidates translations"
+	@echo "make i18n-update         : merge *.pot with *.po after extraction"
+	@echo "make i18n-runtime        : create *.mo after update"
+	@echo "make submoduleclean      : Reset submodule (remove changed, detached HEAD)"
+	@echo "make submodule-clean-pull: Reset submodule (remove changed, detached HEAD)"
 info:
 	@echo "VERSION:           [$(VERSION)]"
 	@echo "I18N_YEAR:         [$(I18N_YEAR)]"
@@ -102,7 +102,7 @@ submoduleclean:
 	cd font/awesome && git checkout master
 	cd font/lato && git checkout master
 	cd font/roboto && git checkout master
-submodule-update:
+submodule-clean-pull:
 	cd font/awesome && git checkout master && git pull
 	cd font/lato && git checkout master && git pull
 	cd font/roboto && git checkout master && git pull
