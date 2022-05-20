@@ -7,6 +7,10 @@
 # |                                                                           |
 # | Changes:                                                                  |
 # |                                                                           |
+# | 0.1.2 2022-05-21 Christian Külker <c@c8i.org>                             |
+# |     - Add submodule management                                            |
+# |     - Set I18N_YEAR to current year                                       |
+# | 0.1.0 2020-04-02 Christian Külker <c@c8i.org>                             |
 # | 0.1.1 2022-05-09 Christian Külker <c@c8i.org>                             |
 # |     - Fix Makefile typos                                                  |
 # | 0.1.0 2020-04-02 Christian Külker <c@c8i.org>                             |
@@ -14,13 +18,13 @@
 # |                                                                           |
 # +---------------------------------------------------------------------------+
 #
-VERSION=0.1.1
+VERSION=0.1.2
 # -----------------------------------------------------------------------------
 # NO CHANGES BEYOND THIS POINT
 I18N_NS:=pankyll-theme-rankle
 I18N_DESC:=A Jinja2 theme for pankyll
 I18N_FIRST:=Christian Külker <c@c8i.org>
-I18N_YEAR:=2020
+I18N_YEAR:=$(shell date +'%Y')
 I18N_PFX:=locale
 I18N_LOCALES:=en_US de_DE ja_JP
 I18N_PO_FILES:=$(foreach locale,$(I18N_LOCALES),$(I18N_PFX)/$(locale)/LC_MESSAGES/$(I18N_NS).po)
@@ -35,18 +39,22 @@ usage:
 	@echo "$(L)"
 	@echo "USAGE:"
 	@echo "$(L)"
-	@echo "make usage        : this information"
-	@echo "make info         : print more info"
-	@echo "make clean        : remove prcoess files"
-	@echo "make realclean    : remove target"
-	@echo "make test         : debug test"
-	@echo "make i18n-extract : extract new text from HTML - invalidates translations"
-	@echo "make i18n-update  : merge *.pot with *.po after extraction"
-	@echo "make i18n-runtime : create *.mo after update"
+	@echo "make usage           : this information"
+	@echo "make info            : print more info"
+	@echo "make clean           : remove prcoess files"
+	@echo "make realclean       : remove target"
+	@echo "make test            : debug test"
+	@echo "make i18n-extract    : extract new text from HTML - invalidates translations"
+	@echo "make i18n-update     : merge *.pot with *.po after extraction"
+	@echo "make i18n-runtime    : create *.mo after update"
+	@echo "make submoduleclean  : Reset submodule (remove changed, detached HEAD)"
+	@echo "make submodule-update: Reset submodule (remove changed, detached HEAD)"
 info:
 	@echo "VERSION:           [$(VERSION)]"
+	@echo "I18N_YEAR:         [$(I18N_YEAR)]"
 	@echo "I18N_PO_TEMPLATE:  [$(I18N_PFX)/$(I18N_NS).pot]"
 	@echo "I18N_PO_FILES:     [$(I18N_PO_FILES)]"
+	git submodule status --recursive
 clean:
 realclean: clean
 translationclean:
@@ -87,3 +95,14 @@ i18n-update: i18n-init
 $(I18N_MO_FILES): $(I18N_PO_FILES)
 	msgfmt $(patsubst %.mo,%.po,$@) -o $@
 i18n-runtime: $(I18N_MO_FILES)
+#
+# Manage submodules
+#
+submoduleclean:
+	cd font/awesome && git checkout master
+	cd font/lato && git checkout master
+	cd font/roboto && git checkout master
+submodule-update:
+	cd font/awesome && git checkout master && git pull
+	cd font/lato && git checkout master && git pull
+	cd font/roboto && git checkout master && git pull
