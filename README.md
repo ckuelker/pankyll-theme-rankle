@@ -1,8 +1,8 @@
 ---
 title: pankyll-theme-rankle/README.md
 author: Christian Külker
-version: 0.1.5
-date: 2022-05-09
+version: 0.1.6
+date: 2022-05-21
 
 ---
 
@@ -22,6 +22,7 @@ pages suited for documentation and blog posts.
 
 | Version | Date       | Notes                                                |
 | ------- | ---------- | ---------------------------------------------------- |
+| 0.1.6   | 2022-05-21 | Makefile,awesome 5.15.4-3, lato 1.0.1, roboto 0.10.0 |
 | 0.1.5   | 2022-05-09 | Makefile, English, rm duplicate license info         |
 | 0.1.4   | 2021-05-18 | Add top 10 feature, cfg.yaml feature section         |
 | 0.1.3   | 2020-10-21 | Add disclaimer for CC-BY-SA 4.0, fix link to favicon |
@@ -90,6 +91,15 @@ locale/en_US/LC_MESSAGES/pankyll-theme-rankle.po
 locale/ja_JP/LC_MESSAGES/pankyll-theme-rankle.mo
 locale/ja_JP/LC_MESSAGES/pankyll-theme-rankle.po
 ~~~
+
+# Updating Sub Modules
+
+```bash
+make submoduleclean
+make submodule-update
+make info # get NAME and VERSION
+git commit -m 'font/NAME (VERSION)' font/NAME
+```
 
 # Author
 
