@@ -4,10 +4,10 @@
 |                                                                             |
 | Pankyll rankle default CSS file                                             |
 |                                                                             |
-| More specific rules override more general ones. Specificity is defined      |
-| based on how many IDs, classes, and element names are involved, as well as  |
-| whether the !important declaration was used. When multiple rules of the     |
-| same "specificity level" exist, whichever one appears last wins.            |
+| More specific rules override more general rules. Specificity is defined by  |
+| the number of IDs, classes, and element names involved, as well as whether  |
+| the !important declaration has been used. If multiple rules of the same     |
+| "specificity level" exist, the one that appears last wins.                  |
 |                                                                             |
 | Version: 0.1.1                                                              |
 |                                                                             |
@@ -116,8 +116,8 @@
 
 /* --- [ BASE LAYOUT ] ----------------------------------------------------- */
 /*
-Body should be at least 100% hight. It is also possible to use a combination
-of hight 100% in <html> and min-hight: 100% in <body>
+The body should be at least 100% hight. It is also possible to use a
+combination of hight 100% in <html> and min-hight: 100% in <body>
  */
 .rankle {
         min-height: 100vh;
@@ -135,7 +135,7 @@ the body able to shrink and to be extensible
 }
 
 /*
-Make body content items extensible too.
+Make body content items extensible too
 */
 .rankle-content {
         flex: 1 1 auto;
@@ -145,7 +145,7 @@ Make body content items extensible too.
 
 /*
 Move the first side bar (left) before content. If this needs to be before the
-content also on big screen, put this lines into the @media block.
+content also on big screens, put this lines into the @media block.
  */
 .rankle-sidebar-1 {
         order: -1;
@@ -157,14 +157,14 @@ This is the big screen
 
 @media (min-width: 768px) {
     /*
-    The items of the body move to the side
+    The items of the body moves to the side
     */
     .rankle-body {
         flex-direction: row;
     }
 
     /*
-    Set the side bars to 260px for big screen and they are not flexible.
+    Set the side bars to 260px for big screens and they are not flexible
     */
    .hg-sidebar {
         flex: 0 0 260px;
@@ -195,12 +195,12 @@ This is the big screen
 .rankle-sidebar-1 {
   background-color: rgba(182,185,191,.5);
 }
-/* in case we have obey a second grade heading Tags/index.html */
+/* In case we have to obey a second level heading Tags/index.html */
 .bar-toc ul {
   list-style: none;
 }
 /*
-   add search bar here with color
+  Add search bar here with color
   background-color: rgba(99,99,99,.2);
 */
 .td-sidebar    {
@@ -267,7 +267,7 @@ h3 {
 ul {
    padding-left: 15px;
 }
-/* left side bar  - nav list*/
+/* Left side bar  - nav list*/
 .td-sidebar-nav-toc-tile {
   list-style: none;
 }
@@ -355,12 +355,12 @@ table {
 }
 pre {
     font-size: 120%;
-    /* to wrap around long line in code block this CSS 3 can be used:
+    /* To wrap around long lines in code blocks this CSS 3 can be used:
     white-space: pre-wrap;
     See: https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
     however, when used it will still be most likely wrong in the PDF */
 }
-pre.plain { /* pre class = hljs pain, added by parent.js */
+pre.plain { /* Pre class = hljs pain, added by parent.js */
    background: rgba(182,185,191,.5); /* IBM GREY */
    padding: 1em;
 }
@@ -567,5 +567,3 @@ a.rankle-link { /* TODO: do not exist */
 a.rankle-link-dark {
   color: #0275d8;
 }
-
-
