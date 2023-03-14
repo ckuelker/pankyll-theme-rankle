@@ -3,12 +3,15 @@
 # |                                                                           |
 # | Rankle theme tasks, like i18n and l10n.                                   |
 # |                                                                           |
-# | Version: 0.1.1 (change inline)                                            |
+# | Version: 0.1.3 (change inline)                                            |
 # |                                                                           |
 # | Changes:                                                                  |
 # |                                                                           |
+# | 0.1.3 2023-03-14 Christian Külker <c@c8i.org>                             |
+# |     - Fix typos                                                           |
+# |     - Fix version, bump version                                           |
 # | 0.1.2 2022-05-21 Christian Külker <c@c8i.org>                             |
-# |     - Add submodule management                                            |
+# |     - Add sub-module management                                           |
 # |     - Set I18N_YEAR to current year                                       |
 # | 0.1.0 2020-04-02 Christian Külker <c@c8i.org>                             |
 # | 0.1.1 2022-05-09 Christian Külker <c@c8i.org>                             |
@@ -18,7 +21,7 @@
 # |                                                                           |
 # +---------------------------------------------------------------------------+
 #
-VERSION=0.1.2
+VERSION=0.1.3
 # -----------------------------------------------------------------------------
 # NO CHANGES BEYOND THIS POINT
 I18N_NS:=pankyll-theme-rankle
@@ -96,7 +99,7 @@ $(I18N_MO_FILES): $(I18N_PO_FILES)
 	msgfmt $(patsubst %.mo,%.po,$@) -o $@
 i18n-runtime: $(I18N_MO_FILES)
 #
-# Manage submodules
+# Manage sub-modules
 #
 submoduleclean:
 	cd font/awesome && git checkout master
