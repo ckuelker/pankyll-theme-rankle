@@ -1,16 +1,16 @@
 ---
 title: pankyll-theme-rankle/README.md
 author: Christian Külker
-version: 0.1.7
-date:           
+version: 0.1.8
+date: 2023-03-14
 
 ---
 
 # Abstract
 
-This document describes briefly the [Pankyll] theme [Rankle], its version,
-and installation. The goal of the [Rankle] theme is to provide easy to read
-pages suited for documentation and blog posts.
+This document briefly describes the [Pankyll] theme [Rankle], its version and
+installation. The goal of the Rankle theme is to provide easy to read pages
+suitable for documentation and blog posts.
 
 ![Github license](https://img.shields.io/github/license/ckuelker/pankyll-theme-rankle.svg)
 ![Github issues](https://img.shields.io/github/issues/ckuelker/pankyll-theme-rankle.svg?style=popout-square)
@@ -22,6 +22,9 @@ pages suited for documentation and blog posts.
 
 | Version | Date       | Notes                                                |
 | ------- | ---------- | ---------------------------------------------------- |
+| 0.1.8   | 2023-03-14 | Improve writing (README, Makefile, 404, ...)         |
+|         |            | Remove white lines from layout, bump copyright year  |
+|         |            | Fix Makefile version, bump cfg.yaml copyright year   |
 | 0.1.7   |            | Makefile                                             |
 | 0.1.6   | 2022-05-21 | Makefile,awesome 5.15.4-3, lato 1.0.1, roboto 0.10.0 |
 | 0.1.5   | 2022-05-09 | Makefile, English, rm duplicate license info         |
@@ -34,19 +37,19 @@ pages suited for documentation and blog posts.
 
 # Introduction
 
-The [Rankle] theme tailors to the needs of easy to read documentation and
-focus on versioned pages in git while make it still possible to add opinionated
-blog pages, either separated or mixed. This page describes briefly the
-[Pankyll] theme [Rankle]. It shows the prerequisites, the installation, the
-features and configuration of the theme. The lightweight theme’s main feature
-is to use high contrast colors for different information sections, that let you
-focus on the distinct sections.
+The [Rankle] theme is tailored to the needs of easy to read documentation and a
+focus on versioned pages in git, while still allowing for the addition of
+opinionated blog pages, either separate or mixed. This page briefly describes
+the [Pankyll] Rankle theme. It shows the requirements, installation, features
+and configuration of the theme. The main feature of this lightweight theme is
+the use of high-contrast colors for different information sections, allowing
+you to focus on the different sections.
 
 # Installation
 
-Consider using the `pankyll-theme-rankle-example` skeleton to test out the
-theme or to start a new site. However the installation by itself is just
-cloning the theme into the `themes` directory.
+Consider using the `pankyll-theme-rankle-example` skeleton to test the theme or
+to start a new site. However, the installation itself is just cloning the theme
+into the `themes` directory.
 
 ```shell
 cd  project/themes
@@ -55,7 +58,7 @@ git clone --recursive https://github.com/ckuelker/pankyll-theme-rankle.git
 
 # Creating Or Re-Creating The `favicon.ico`.
 
-The `favicon.ico` can be create via the **ImageMagick** command line tool
+The `favicon.ico` can be created using the **ImageMagick** command line tool
 `convert`:
 
 ```shell
@@ -63,7 +66,7 @@ convert -density 256x256 -background transparent favicon.svg \
 -define icon:auto-resize -colors 256 favicon.ico
 ```
 
-More info about [favicons in the quick guide].
+Learn more about [Favicons in the Quick Guide].
 
 [github]: https://github.com/ckuelker/quick-guide-en-us/blob/master/Web/Design/favicon.md
 
@@ -108,7 +111,7 @@ git commit -m 'font/NAME (VERSION)' font/NAME
 
 # License And Copyright
 
-    Copyright (C) 2020, 2021, 2022  by Christian Kuelker, see LICENSE file.
+    Copyright (C) 2020 - 2023 by Christian Kuelker, see LICENSE file.
 
 [Pankyll]: https://www.pankyll.org/
 [Rankle]: https://github.com/ckuelker/pankyll-theme-rankle/
