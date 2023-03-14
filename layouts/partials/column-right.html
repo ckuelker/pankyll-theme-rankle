@@ -1,7 +1,6 @@
 <!-- RIGHT SIDE TOOLS -->
 {# Jinja2 2.10 namespace can be used - not possible for Debian Stretch #}
 
-
 {% set n = ['1'] %}
       <div class="wrapper">
         <ul>
@@ -16,8 +15,8 @@
 {% endif %}
 
 {% if cfg.keywords %}
-    {% for kw in cfg.keywords %}{# categories, tags, ... #}
-        {% if frontmatter[kw] %}{# if we have the category inside the document #}
+    {% for kw in cfg.keywords %}{# Categories, tags, ... #}
+        {% if frontmatter[kw] %}{# If we have the category inside the document #}
             {% if n.append('1') %}{% endif %}
           <li>
            <input type="checkbox" id="list-item-{{n|length}}">
