@@ -1,1 +1,6 @@
-{% if pdf %}<li><a class="rankle-link" href="{{ pdf }}">🡻 {{gettext("PDF")}}</a></li>{% endif %}
+{% if pdf %}
+<li><a class="rankle-link" href="{{ pdf }}">🡰  {{gettext("PDF")}}</a></li>
+<li><a class="rankle-link" href="{{ pdf }}" target="_blank"> {{gettext("PDF")}} 🡺 </a></li>
+<li><a class="rankle-link" href="{{ pdf }}" download>{{gettext("PDF")}} 🡻 </a></li>
+<li><a class="rankle-link" href="javascript:void(0);" onclick="openPDF('{{ pdf }}')">🡹 {{gettext("PDF")}}</a></li>
+{% endif %}

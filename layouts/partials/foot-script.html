@@ -3,3 +3,15 @@
   hljs.initHighlightingOnLoad();
 </script>
 <script src="/js/rankle.js"></script>
+{% if pdf %}
+<script>
+function openPDF(pdfURL) {
+    var win = window.open('', '', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=800,height=800');
+    win.document.write('<html><head><title>View PDF</title></head><body>');
+    win.document.write('<embed src="' + pdfURL + '" type="application/pdf" height="100%" width="100%">');
+    win.document.write('</body></html>');
+    win.document.close(); // necessary for IE >= 10
+    win.focus(); // necessary for IE >= 10
+}
+</script>
+{% endif %}
