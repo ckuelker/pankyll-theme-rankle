@@ -1,8 +1,8 @@
 ---
 title: pankyll-theme-rankle/README.md
 author: Christian Külker
-version: 0.1.8
-date: 2023-03-14
+version: 0.1.9
+date: 2023-07-31
 
 ---
 
@@ -22,6 +22,7 @@ suitable for documentation and blog posts.
 
 | Version | Date       | Notes                                                |
 | ------- | ---------- | ---------------------------------------------------- |
+| 0.1.9   | 2023-07-31 | Add more PDF download/ view links                    |
 | 0.1.8   | 2023-03-14 | Improve writing (README, Makefile, 404, ...)         |
 |         |            | Remove white lines from layout, bump copyright year  |
 |         |            | Fix Makefile version, bump cfg.yaml copyright year   |
