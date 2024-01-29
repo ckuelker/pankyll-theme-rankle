@@ -1,8 +1,8 @@
 ---
 title: pankyll-theme-rankle/README.md
 author: Christian Külker
-version: 0.1.9
-date: 2023-07-31
+version: 0.2.0
+date: 2024-01-29
 
 ---
 
@@ -22,6 +22,7 @@ suitable for documentation and blog posts.
 
 | Version | Date       | Notes                                                |
 | ------- | ---------- | ---------------------------------------------------- |
+| 0.2.0   | 2024-01-29 | Add styles for blockquote similar to page info box   |
 | 0.1.9   | 2023-07-31 | Add more PDF download/ view links                    |
 | 0.1.8   | 2023-03-14 | Improve writing (README, Makefile, 404, ...)         |
 |         |            | Remove white lines from layout, bump copyright year  |
@@ -112,7 +113,7 @@ git commit -m 'font/NAME (VERSION)' font/NAME
 
 # License And Copyright
 
-    Copyright (C) 2020 - 2023 by Christian Kuelker, see LICENSE file.
+    Copyright (C) 2020 - 2024 by Christian Kuelker, see LICENSE file.
 
 [Pankyll]: https://www.pankyll.org/
 [Rankle]: https://github.com/ckuelker/pankyll-theme-rankle/
