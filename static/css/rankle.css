@@ -9,9 +9,12 @@
 | the !important declaration has been used. If multiple rules of the same     |
 | "specificity level" exist, the one that appears last wins.                  |
 |                                                                             |
-| Version: 0.1.1                                                              |
+| Version: 0.1.2                                                              |
 |                                                                             |
 | Changes:                                                                    |
+|                                                                             |
+| 0.1.2 2024-01-29 Christian Kuelker <c@.c8i.org>                             |
+|     - Add styles for blockquote similar to page info box                    |
 |                                                                             |
 | 0.1.1 2020-03-09 Christian Kuelker <c@.c8i.org>                             |
 |     - Add .disclaimer_warranty_liability                                    |
@@ -365,6 +368,16 @@ pre.plain { /* Pre class = hljs pain, added by parent.js */
    padding: 1em;
 }
 
+/* --- [ blockquote ] ------------------------------------------------------ */
+/* Similar to 'page info box'                                                */
+blockquote {
+    background: #f8f9fa;
+    margin: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #30638e;
+}
 /* --- [ page info box ] --------------------------------------------------- */
 .pageinfo-primary {
   border-style: solid;
