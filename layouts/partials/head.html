@@ -21,6 +21,8 @@
       <meta property="article:modified_time" content="{{git.IsoDateTimeTz}}">
 {% endif %}
       <meta property="og:site_name" content="{{ cfg.site.title }}">
+      <!-- itemprop (example https://schema.org/Article should be used inside
+      the <body> tag
       <meta itemprop=name content="{{ title }}">
       <meta itemprop=description content="{{ description }}">
 {% if git and git.CommitIsoDateTimeTz %}
@@ -33,6 +35,7 @@
       <meta itemprop=wordCount content="{{wordcount}}">
 {% endif %}
       <meta itemprop=keywords content="cheat sheet,">
+      -->
       <meta name=twitter:card content="summary">
       <meta name=twitter:title content="{{ title }}">
       <meta name=twitter:description content="{{ description }}">
