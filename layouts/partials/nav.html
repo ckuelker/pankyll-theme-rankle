@@ -4,16 +4,16 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    {% if nav %}
     <ul class="navbar-nav mt-2 mt-lg-0">
+    {% if nav %}
         {% for n in nav %}
         <li class="nav-item mr-4 mb-2 mb-lg-0 {% if n.link.active %}active{% endif %}">
            <a class="nav-link pankyll-nav-topic" href="{{ n.link.url }}"><span class="pankyll-nav-topic">{{ n.link.text }}</span></a>
         </li>
         {% endfor %}
-    </ul>
     {% endif %}
     {% include "partials/more.html" %}
     {% include "partials/languages.html" %}
+    </ul>
   </div>
 </nav>
