@@ -5,7 +5,7 @@
                 {{ language_name }} 
             </span>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         {% for locale in l10n_urls %}
             <a class="dropdown-item" href="{{l10n_urls[locale].url|localurl}}">
                 {{l10n_urls[locale].name}}

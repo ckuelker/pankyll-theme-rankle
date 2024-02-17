@@ -5,7 +5,7 @@
                 {{ gettext("More") }}
             </span>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         {% for obj in cfg.more[locale] %}
             <a class="dropdown-item" href="{{obj.link.url|localurl}}">{{obj.link.text}}</a>
         {% endfor %}
