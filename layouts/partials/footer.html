@@ -26,8 +26,8 @@
             {% set obj = cfg.footer_middle[locale][o] %}
              <li class="list-inline-item mx-2 h3 footer-item"
                  data-toggle="tooltip" data-placement="top" title=""
-                 aria-label="{{obj.tip}}" data-original-title="{{obj.tip}}">
-               <a class="text-white footer-link" target="_blank" href="{{obj.url}}">
+                 data-original-title="{{obj.tip}}">
+               <a class="text-white footer-link" target="_blank" aria-label="{{obj.tip}}" href="{{obj.url}}">
                  <i class="{{obj.font}} fa-{{obj.icon}}"></i>
                </a>
               </li>
@@ -53,8 +53,8 @@
             {% set obj = cfg.footer_right[locale][o] %}
              <li class="list-inline-item mx-2 h3 footer-item"
                  data-toggle="tooltip" data-placement="top" title=""
-                 aria-label="{{obj.tip}}" data-original-title="{{obj.tip}}">
-               <a class="text-white footer-link" target="_blank" href="{{obj.url}}">
+                 data-original-title="{{obj.tip}}">
+               <a class="text-white footer-link" target="_blank" aria-label="{{obj.tip}}" href="{{obj.url}}">
                  <i class="{{obj.font}} fa-{{obj.icon}}"></i>
                </a>
               </li>
