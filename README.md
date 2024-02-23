@@ -1,8 +1,8 @@
 ---
 title: pankyll-theme-rankle/README.md
 author: Christian Külker
-version: 0.2.0
-date: 2024-01-29
+version: 0.2.1
+date: 2024-02-17
 
 ---
 
@@ -22,6 +22,7 @@ suitable for documentation and blog posts.
 
 | Version | Date       | Notes                                                |
 | ------- | ---------- | ---------------------------------------------------- |
+| 0.2.1   | 2024-02-17 | Fix HTML tags, itemprop, aria, apple-touch-icon      |
 | 0.2.0   | 2024-01-29 | Add styles for blockquote similar to page info box   |
 | 0.1.9   | 2023-07-31 | Add more PDF download/ view links                    |
 | 0.1.8   | 2023-03-14 | Improve writing (README, Makefile, 404, ...)         |
